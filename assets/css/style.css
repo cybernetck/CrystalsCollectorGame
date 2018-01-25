@@ -1,0 +1,30 @@
+/*
+Stylesheet for Crystal Collector Game
+
+*/
+
+.header {
+    text-align:center;
+}
+
+#gameSpace {
+    background-color:rgb(rgb(199, 187, 15), green, blue);
+    color: darkgray;
+}
+
+#gem1 {
+    background-color: blue;
+    color:#fff;
+}
+#gem2 {
+    background-color: aqua;
+    color:rgb(42, 3, 94);
+}
+#gem3 {
+    background-color: rgb(255, 0, 13);
+    color:#fff;
+}
+#gem4 {
+    background-color: rgb(73, 156, 5);
+    color:#eee;
+}
