@@ -4,14 +4,27 @@ Stylesheet for Crystal Collector Game
 */
 
 .header {
+    background-color:rgb(95, 95, 95);
     text-align:center;
+    color:#fff;
+
 }
 
 #gameSpace {
     background-color:rgb(rgb(199, 187, 15), green, blue);
+    padding-top: 50px;
     color: darkgray;
+    text-align:center;
+    height: 400px;
 }
 
+#gemGroup {
+
+    width: 100%;
+    padding-top: 200px;
+    text-align: center;
+
+}
 #gem1 {
     background-color: blue;
     color:#fff;
@@ -27,4 +40,11 @@ Stylesheet for Crystal Collector Game
 #gem4 {
     background-color: rgb(73, 156, 5);
     color:#eee;
+}
+
+#answer {
+    background-color:rgb(41, 36, 36);
+    color:#fff;
+    height: 100px;
+    padding-top:20px;
 }
