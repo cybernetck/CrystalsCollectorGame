@@ -3,43 +3,117 @@ Stylesheet for Crystal Collector Game
 
 */
 
+/* credit - https://css-tricks.com/perfect-full-page-background-image/ */
+
+/* body { 
+    background: url("../images/Pirate_Treasure.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } */
+
 .header {
-    background-color:rgb(95, 95, 95);
+    background-color:rgbA(0, 0, 0, 0.20);
     text-align:center;
     color:#fff;
 
 }
 
-#gameSpace {
-    background-color:rgb(rgb(199, 187, 15), green, blue);
-    padding-top: 50px;
-    color: darkgray;
+/* #gameSpace {
+
+} */
+
+#answer {
+    color: #FFF;
+
+    padding-top:70px;
+    border-radius: 60px;
     text-align:center;
-    height: 400px;
+    border-radius: 60px;
+}
+#numberToGet{
+    text-align: center;
+}
+
+#gameStatus {
+    background-color: aquamarine;
+    color: #000;
+    text-align:center;
+    transition-duration: 1000ms;
+    height: 80px;
+    padding-top: 20px;
+}
+
+#scoreSpace {
+
+    background-color:rgbA(31, 29, 29, 0.5);
+    text-align: center;
+    height: 100px;
+    border-radius: 60px;
+
+}
+
+#userGuess {
+    /* padding-top:20px; */
 }
 
 #gemGroup {
-
-    width: 100%;
-    padding-top: 200px;
     text-align: center;
-
+    /* padding-top:70px; */
 }
+ 
 #gem1 {
     background-color: blue;
     color:#fff;
+    /* height: 150px;
+    width:  200px; */
 }
 #gem2 {
     background-color: aqua;
     color:rgb(42, 3, 94);
+    /* height: 150px;
+    width:  200px; */
 }
 #gem3 {
     background-color: rgb(255, 0, 13);
     color:#fff;
+    /* height: 150px;
+    width:  200px; */
 }
 #gem4 {
     background-color: rgb(73, 156, 5);
     color:#eee;
+    /* height: 150px;
+    width:  200px; */
+}
+
+#reset {
+
+    height: 75px;
+    width:  150px;
+    border-radius: 60px;
+    background-color: rgb(150, 150, 150);
+    color:#eee;
+    text-align: center;
+    vertical-align: middle;
+    /* padding-top:70px; */
+}
+
+#wins {
+    background-color:rgbA(31, 29, 29, 0.5);
+    text-align: center;
+    height: 100px;
+    border-radius: 60px;
+    /* padding-top: 50px; */
+}
+
+#losses {
+    background-color:rgbA(31, 29, 29, 0.5);
+    text-align: center;
+    height: 100px;
+    border-radius: 60px;
+    /* padding-top: 50px; */
 }
 
 #answer {
