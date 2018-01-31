@@ -5,24 +5,38 @@ Stylesheet for Crystal Collector Game
 
 /* credit - https://css-tricks.com/perfect-full-page-background-image/ */
 
-/* body { 
+h1 {
+    font-family: 'Indie Flower', cursive;
+}
+
+body { 
+  
+
     background: url("../images/Pirate_Treasure.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  } */
+    color:#fff;
+  }
 
 .header {
+
     background-color:rgbA(0, 0, 0, 0.20);
     text-align:center;
     color:#fff;
 
 }
 
-/* #gameSpace {
+#gameSpace {
 
-} */
+    background-color:rgbA(0, 0, 0, 0.20);
+    color:#fff;
+    text-align: center;
+    height: 100px;
+    transition-duration: 2000ms;
+    padding-top: 30px;
+}
 
 #answer {
     color: #FFF;
@@ -32,25 +46,32 @@ Stylesheet for Crystal Collector Game
     text-align:center;
     border-radius: 60px;
 }
-#numberToGet{
+/* #numberToGet{
     text-align: center;
-}
+} */
 
 #gameStatus {
-    background-color: aquamarine;
-    color: #000;
+    background-color: rgba(25, 156, 139, .2);
+    color: #FFF;
     text-align:center;
-    transition-duration: 1000ms;
-    height: 80px;
-    padding-top: 20px;
+    /* transition-duration: 1000ms; */
+    /* height: 80px; */
+    padding-top: 10px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
+
 
 #scoreSpace {
 
     background-color:rgbA(31, 29, 29, 0.5);
+    color:#fff;
     text-align: center;
     height: 100px;
     border-radius: 60px;
+    transition-duration: 2000ms;
 
 }
 
@@ -60,7 +81,7 @@ Stylesheet for Crystal Collector Game
 
 #gemGroup {
     text-align: center;
-    /* padding-top:70px; */
+    padding-top:250px;
 }
  
 #gem1 {
@@ -90,22 +111,52 @@ Stylesheet for Crystal Collector Game
 
 #reset {
 
-    height: 75px;
-    width:  150px;
+    height: 65px;
+    width:  75px;
     border-radius: 60px;
-    background-color: rgb(150, 150, 150);
-    color:#eee;
+    background-color: rgb(248, 232, 6);
+    transition-duration: 2000ms;
+    opacity: .6;
+    color:rgb(99, 94, 94);
     text-align: center;
     vertical-align: middle;
-    /* padding-top:70px; */
+    margin-top:10px;
+    margin-bottom:10px;
+
 }
+#reset:hover {
+    transition-duration: 2000ms;
+    opacity: 1.0;
+}
+
+#sound {
+
+    height: 65px;
+    width:  75px;
+    border-radius: 60px;
+    background-color: rgb(248, 123, 6);
+    transition-duration: 2000ms;
+    opacity: .6;
+    color:rgb(250, 243, 243);
+    text-align: center;
+    vertical-align: middle;
+    margin-top:10px;
+    margin-bottom:10px;
+
+}
+
+#sound:hover {
+    transition-duration: 2000ms;
+    opacity: 1.0;
+}
+
 
 #wins {
     background-color:rgbA(31, 29, 29, 0.5);
     text-align: center;
     height: 100px;
     border-radius: 60px;
-    /* padding-top: 50px; */
+    color:#FFF;
 }
 
 #losses {
@@ -113,6 +164,7 @@ Stylesheet for Crystal Collector Game
     text-align: center;
     height: 100px;
     border-radius: 60px;
+    color:#fff;
     /* padding-top: 50px; */
 }
 
@@ -122,3 +174,11 @@ Stylesheet for Crystal Collector Game
     height: 100px;
     padding-top:20px;
 }
+
+.hidden {
+    display:none;
+}
+
+/* .textFFF{
+    color:#fff;
+} */
