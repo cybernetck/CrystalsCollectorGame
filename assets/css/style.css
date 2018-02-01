@@ -5,19 +5,27 @@ Stylesheet for Crystal Collector Game
 
 /* credit - https://css-tricks.com/perfect-full-page-background-image/ */
 
-h1 {
+* {
+
     font-family: 'Indie Flower', cursive;
+    /* font-family: 'Gloria Hallelujah', cursive; */
 }
 
 body { 
   
-
     background: url("../images/Pirate_Treasure.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color:#fff;
+
+  }
+
+  button {
+
+      width:200px;
+      height:240px;
   }
 
 .header {
@@ -39,30 +47,26 @@ body {
 }
 
 #answer {
-    color: #FFF;
 
+    color: #FFF;
     padding-top:70px;
     border-radius: 60px;
     text-align:center;
     border-radius: 60px;
+
 }
-/* #numberToGet{
-    text-align: center;
-} */
 
 #gameStatus {
+
     background-color: rgba(25, 156, 139, .2);
     color: #FFF;
     text-align:center;
-    /* transition-duration: 1000ms; */
-    /* height: 80px; */
     padding-top: 10px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-
 
 #scoreSpace {
 
@@ -75,38 +79,56 @@ body {
 
 }
 
-#userGuess {
-    /* padding-top:20px; */
-}
-
 #gemGroup {
+
     text-align: center;
     padding-top:250px;
+    background-color: transparent;
+    
 }
- 
+
 #gem1 {
-    background-color: blue;
-    color:#fff;
-    /* height: 150px;
-    width:  200px; */
+  
+    background-image: url( '../images/Gem1.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    padding-top: 40px;
+
 }
+
 #gem2 {
-    background-color: aqua;
-    color:rgb(42, 3, 94);
-    /* height: 150px;
-    width:  200px; */
+
+    background-image: url( '../images/Gem2.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    text-align: center;
+ 
 }
 #gem3 {
-    background-color: rgb(255, 0, 13);
-    color:#fff;
-    /* height: 150px;
-    width:  200px; */
+
+    background-image: url( '../images/Gem3.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+
 }
 #gem4 {
-    background-color: rgb(73, 156, 5);
-    color:#eee;
-    /* height: 150px;
-    width:  200px; */
+
+    background-image: url( '../images/Gem4.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: transparent;
+    border: 0px;
+    outline:none;
+
 }
 
 #reset {
@@ -124,7 +146,9 @@ body {
     margin-bottom:10px;
 
 }
+
 #reset:hover {
+
     transition-duration: 2000ms;
     opacity: 1.0;
 }
@@ -146,12 +170,15 @@ body {
 }
 
 #sound:hover {
+
     transition-duration: 2000ms;
     opacity: 1.0;
+
 }
 
 
 #wins {
+
     background-color:rgbA(31, 29, 29, 0.5);
     text-align: center;
     height: 100px;
@@ -160,25 +187,20 @@ body {
 }
 
 #losses {
+
     background-color:rgbA(31, 29, 29, 0.5);
     text-align: center;
     height: 100px;
     border-radius: 60px;
     color:#fff;
-    /* padding-top: 50px; */
+
 }
 
 #answer {
+
     background-color:rgb(41, 36, 36);
     color:#fff;
     height: 100px;
-    padding-top:20px;
-}
+    padding-top: 20px;
 
-.hidden {
-    display:none;
 }
-
-/* .textFFF{
-    color:#fff;
-} */
