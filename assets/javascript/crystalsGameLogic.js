@@ -5,12 +5,19 @@ Matthew Womack, 2018.
 
 */
 
+
+//initialize variables
 var numberToGuess, playerScore=0, wins=0,losses=0, gem1, gem2, gem3, gem4, gem5;
 
 var userGuessRef   = $("#userGuess");
 var gameStatusRef  = $("#gameStatus");
 var numberToGetRef = $("#numberToGet");
 var userGuessRef   = $("#userGuess");
+var lossesRef      = $("#lossesBox");
+var winsRef        = $("#winsBox");
+
+
+/* generates random numbers for gems and the number that is to be guessed */
 
 function generateRandom () {
 
@@ -21,16 +28,25 @@ function generateRandom () {
  gem3 = Math.floor(Math.random() * 12) + 1;
  gem4 = Math.floor(Math.random() * 12) + 1;
 
- numberToGetRef.html("<h3>" + numberToGuess + "</h3>")
- debug();
+ numberToGetRef.html("<h2>" + numberToGuess + "</h2>")
+ 
 }
 
-/* first run */
-generateRandom();
-$( "#numberToGet" ).html("<h3>" + numberToGuess + "</h3>");
+/* playGame kicks off the game */
 
+function playGame() {
 
-function debug () {
+    generateRandom();
+
+    numberToGetRef.hide().html("<h2>" + numberToGuess + "</h2>");
+    lossesRef.html("<h2>" + losses + "</h2>");
+    winsRef.html("<h2>" + wins + "</h2>");
+
+    }
+
+/* debug() function can be used to validate results - call from console */
+
+function debug() {
 
     console.log("Number to Guess", numberToGuess);
     console.log("gem 1", gem1);
@@ -39,21 +55,25 @@ function debug () {
     console.log("gem 4", gem4);
 }
 
+/*  this function is called at the end of the game, for some basic house keeping, and 
+sets the playerScore back to 0, and clearing the Number to Guess, and the User Guesses */
+
 function startOver() {
     
     playerScore=0;
-    numberToGetRef.fadeOut('slow').text(" ").fadeIn('slow', generateRandom);
+    numberToGetRef.fadeOut('slow');
     userGuessRef.fadeOut('slow');
 
+    playGame();
 }
 
-function winOrLose () {
+/* Checks to see if the user has won or lost, and increments winner and loser counters. */
+
+function winOrLose() {
 
     if (playerScore > numberToGuess) {
         losses += 1;
-    
-        // alert("Sorry , you lose. ");
-     
+      
         gameStatusRef.html("<h2> Sorry, you lose </h2>").slideDown(3000).slideUp(3000);
      
          startOver(); 
@@ -62,44 +82,37 @@ function winOrLose () {
     
     else if (playerScore === numberToGuess) {
         wins += 1;
-        //alert("congrats!");
-    
+      
         gameStatusRef.html("<h2> Luck is with you... You've won! </h2>").slideDown(3000).slideUp(3000);
     
         startOver(); 
     }
     
-    $( "#lossesBox" ).html("<h3>" + losses + "</h3>");
-    $( "#winsBox" ).html("<h3>" + wins + "</h3>");
-    //startOver(); 
+    lossesRef.html("<h2>" + losses + "</h2>");
+    winsRef.html("<h2>" + wins + "</h2>");
+
     }
 
-/* onLick listeners */
-$( "#reset").on("click", function(){
+/* adding onClick Listeners for button images in DOM */
+$( "#reset" ).on("click", function(){
 
-    //$("#numberToGet").text("");
-    $( "#userGuess" ).text("");
-    //gameStatusRef.text("");
+    userGuessRef.fadeOut(2000).text("");
     playerScore = 0;
-    generateRandom();
-    debug();
+    
+    numberToGetRef.html("<h2>" + numberToGuess + "</h2>");
 
-    $( "#numberToGet" ).html("<h3>" + numberToGuess + "</h3>");
-
-    $( "#gem1" ).off("click");
-    $( "#gem2" ).off("click");
-    $( "#gem3" ).off("click");
-    $( "#gem4" ).off("click");
+    playGame();
 
     });
     
 $( "#gem1" ).on("click", function (){
 
     playerScore += gem1;
-    console.log(playerScore);
+
     userGuessRef.fadeIn('fast');
     numberToGetRef.fadeIn(2000);
-    userGuessRef.html("<h3>" + playerScore + "</h3>");
+    userGuessRef.html("<h2>" + playerScore + "</h2>");
+
     winOrLose();
 
 });
@@ -107,10 +120,11 @@ $( "#gem1" ).on("click", function (){
 $( "#gem2" ).on("click", function (){
 
     playerScore += gem2;
-    console.log(playerScore);
+
     userGuessRef.fadeIn('fast');
     numberToGetRef.fadeIn(2000);
-    userGuessRef.html("<h3>" + playerScore + "</h3>");
+    userGuessRef.html("<h2>" + playerScore + "</h2>");
+
     winOrLose();
 
 });
@@ -118,10 +132,11 @@ $( "#gem2" ).on("click", function (){
 $( "#gem3" ).on("click", function (){
 
     playerScore += gem3;
-    console.log(playerScore);
+ 
     userGuessRef.fadeIn('fast');
     numberToGetRef.fadeIn(2000);
-    userGuessRef.html("<h3>" + playerScore + "</h3>");
+    userGuessRef.html("<h2>" + playerScore + "</h2>");
+
     winOrLose();
 
 });
@@ -129,11 +144,16 @@ $( "#gem3" ).on("click", function (){
 $( "#gem4" ).on("click", function (){
 
     playerScore += gem4;
-    console.log(playerScore);
+
     userGuessRef.fadeIn('fast');
     numberToGetRef.fadeIn(2000);
-    userGuessRef.html("<h3>" + playerScore + "</h3>");
+    userGuessRef.html("<h2>" + playerScore + "</h2>");
+
     winOrLose();
 
 });
+
+
+/* Run Game */
+playGame();
 
